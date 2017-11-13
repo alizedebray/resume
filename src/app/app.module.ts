@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './sections/home/home.component';
 import { ProfileComponent } from './sections/profile/profile.component';
+import { EducationComponent } from './sections/education/education.component';
 import { ScrollDirective } from './scroll.directive';
 
 @NgModule({
@@ -12,6 +13,7 @@ import { ScrollDirective } from './scroll.directive';
     AppComponent,
     HomeComponent,
     ProfileComponent,
+    EducationComponent,
     ScrollDirective
   ],
   imports: [
