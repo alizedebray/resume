@@ -1,9 +1,18 @@
 section
-  height: 100vh
-  padding-top: 325px
+  padding-bottom: 13vw
+  padding-top: 25vw
   #title
     display: inline-block
     margin: auto
     h1
-      font-size: 80px
       margin-top: -5px
+      @media (max-width: 575px)
+        font-size: 50px
+      @media (min-width: 576px)
+        font-size: 80px
+    br
+      @media (min-width: 309px)
+        display: none
+    hr
+      width: 70px
+      margin-left: 0

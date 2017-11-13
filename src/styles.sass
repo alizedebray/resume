@@ -4,11 +4,17 @@
 
 body
   min-width: 300px
-  background-color: #EDEDED
-  background-image: url('./assets/img/home-background.png')
+  background-color: #ededed
   background-size: contain
   background-repeat: no-repeat
-  background-position: top center
+  background-position: top left
+  background-image: url('./assets/img/home-background-sm.png')
+  @media (min-width: 576px)  
+    background-image: url('./assets/img/home-background-md.png')
+  @media (min-width: 992px)  
+    background-image: url('./assets/img/home-background.png')
+  @media (max-width: 308px) 
+    background-image: none
 
 .btn
   text-transform: uppercase

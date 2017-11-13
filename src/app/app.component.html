@@ -1,24 +1,24 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-light" [@navbarState]="navbarState">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light" [@navbarStyle]="navbarStyle">
+  <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleNavbarStyle()">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse" id="navbarContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" scrollTo href="#profile">Profile</a>
+        <a class="nav-link" scrollTo href="#profile" data-toggle="collapse" data-target="#navbarContent">Profile</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Skills</a>
+        <a class="nav-link" href="#" data-toggle="collapse" data-target="#navbarContent">Skills</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Work experience</a>
+        <a class="nav-link" href="#" data-toggle="collapse" data-target="#navbarContent">Work experience</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Education</a>
+        <a class="nav-link" href="#" data-toggle="collapse" data-target="#navbarContent">Education</a>
       </li>
     </ul>
-    <a class="btn btn-primary my-2 my-lg-4 ml-lg-4 mr-lg-4" href="#">Contact</a>
+    <a class="btn btn-primary my-2 my-lg-4 ml-lg-4 mr-lg-4" href="#" data-toggle="collapse" data-target="#navbarContent">Contact</a>
   </div>
 </nav>
 

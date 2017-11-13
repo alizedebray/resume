@@ -6,36 +6,45 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass'],
   animations: [
-    trigger('navbarState', [
-      state('onTop', style({
+    trigger('navbarStyle', [
+      state('transparent', style({
         backgroundColor: 'transparent',
         boxShadow: "none"
       })),
-      state('notOnTop',   style({
+      state('white',   style({
         backgroundColor: '#fff',
         boxShadow: "0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12)"
       })),
-      transition('notOnTop => onTop', animate('250ms ease-in-out')),
-      transition('onTop => notOnTop', animate('250ms ease-in-out'))
+      transition('white => transparent', animate('250ms ease-in-out')),
+      transition('transparent => white', animate('250ms ease-in-out'))
     ])
   ]
 })
 
 export class AppComponent implements OnInit {
-  navbarState: string = "notOnTop";
+  navbarStyle: string = "white";
+  navbarCollapsed: boolean = true;
 
   ngOnInit() {
-    this.onWindowScroll();
+    this.setNavbarStyle();
   }
 
   @HostListener("window:scroll", [])
-  onWindowScroll() {
-    let number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    if (number > 100) {
-      this.navbarState = "notOnTop";
-    } else if (this.navbarState && number < 10) {
-      this.navbarState = "onTop";
+  setNavbarStyle() {
+    let scrollValue = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    if (scrollValue > 100) {
+      this.navbarStyle = "white";
+    } else if (this.navbarStyle && scrollValue < 10 && this.navbarCollapsed) {
+      this.navbarStyle = "transparent";
     }
   }
 
+  toggleNavbarStyle() {
+    this.navbarCollapsed = !this.navbarCollapsed;
+    if(!this.navbarCollapsed){
+      this.navbarStyle = "white";
+    } else {
+      this.setNavbarStyle();
+    }
+  }
 }
