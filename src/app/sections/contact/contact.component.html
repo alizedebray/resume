@@ -1,0 +1,70 @@
+<section id="contact">
+  <div id="banner" class="mt-5 pt-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-7 text-center">
+          <h2 class="mb-3">Contact me</h2>
+          <p>Whether you have any enquiry or you simply want to say hello, do not hesitate to send me a message. I would be more than happy to answer you back!</p>
+        </div>
+      </div>
+    </div>
+    <img src="./../../../assets/img/contact-arrow.png">
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-6 p-0">
+        <agm-map [latitude]="marker_lat" [longitude]="marker_lng" [styles]="style" [zoom]="4">
+          <agm-info-window [latitude]="marker_lat" [longitude]="marker_lng" [isOpen]="true">
+            <div class='agm-info-window-content'>
+              <p class="mb-1"><b>Localisation</b></p>
+              <p class="mb-0">Lille, FRANCE</p>
+            </div>
+          </agm-info-window>
+        </agm-map>
+      </div>
+      <div class="col-6 px-5 pt-5">
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Name">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Email address">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Company (optional)">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" placeholder="Message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-secondary btn-lg mt-3">Send &nbsp; <i class="material-icons">&#xE163;</i></button>
+        </form>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 
+<footer id="contact">
+  <agm-map [latitude]="marker_lat" [longitude]="marker_lng" [styles]="style" [zoom]="4">
+    <agm-marker [latitude]="marker_lat" [longitude]="marker_lng">
+      <agm-info-window [isOpen]="true">
+          <div class='agm-info-window-content'>
+            Lille, FRANCE
+          </div>
+      </agm-info-window>
+    </agm-marker>
+  </agm-map>
+  <div class="container">
+    <div class="row justify-content-around">
+      <div class="col-3 mt-3">
+        
+      </div>
+      <div class="col-3 mt-3">
+        <h2>Contact me</h2>    
+      </div>
+      <div class="col-3 mt-3"></div>
+    </div>
+  </div>
+</footer> -->
