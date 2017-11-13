@@ -1,4 +1,4 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-light">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light" [@navbarState]="navbarState">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -6,7 +6,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#profile">Profile</a>
+        <a class="nav-link" scrollTo href="#profile">Profile</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Skills</a>
@@ -24,4 +24,4 @@
 
 <home-section></home-section>
 
-<profile-section id="profile"></profile-section>
+<profile-section></profile-section>
