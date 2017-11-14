@@ -7,6 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './sections/home/home.component';
 import { ProfileComponent } from './sections/profile/profile.component';
+import { WorkExperienceComponent } from './sections/work-experience/work-experience.component';
 import { EducationComponent } from './sections/education/education.component';
 import { ContactComponent } from './sections/contact/contact.component';
 import { ScrollDirective } from './scroll.directive';
@@ -16,6 +17,7 @@ import { ScrollDirective } from './scroll.directive';
     AppComponent,
     HomeComponent,
     ProfileComponent,
+    WorkExperienceComponent,
     EducationComponent,
     ContactComponent,
     ScrollDirective

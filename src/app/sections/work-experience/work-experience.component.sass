@@ -1,0 +1,47 @@
+#workExperience
+  margin-top: 120px;
+  .carousel
+    width: 100%
+    .carousel-inner
+      padding-bottom: 45px
+      @media (max-width: 575px)
+        height: 400px
+      .card 
+        box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12)
+        border: none
+        margin: auto
+        width: 98%
+        height: 250px
+        @media (max-width: 575px)
+          height: 350px
+        @media (min-width: 576px) and (max-width: 767px)
+          height: 295px
+        ul
+          -webkit-padding-start: 0px
+          list-style: none
+          li
+            padding-left: 16px
+            padding-bottom: 5px
+            &::before
+              content: "> "
+              margin-left: -16px
+              margin-right: 5px
+    .carousel-control-prev
+      width: 50px
+      margin-left: -50px
+      &-icon
+        background-image: url('./../../../assets/img/prev_arrow.png')
+      @media (max-width: 575px)
+        display: none
+    .carousel-control-next
+      width: 50px
+      margin-right: -45px
+      &-icon
+        background-image: url('./../../../assets/img/next_arrow.png')
+      @media (max-width: 575px)
+        display: none
+    .carousel-indicators li
+      background-color: rgba(134, 142, 150, 0.5)
+      &.active
+        background-color: rgb(134, 142, 150)
+      
