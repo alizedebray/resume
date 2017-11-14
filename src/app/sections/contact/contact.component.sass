@@ -16,30 +16,34 @@
   #mapContainer
     margin-left: -40%
     width: 140%
-    height: 377px
+    height: 424px
     overflow: hidden
-    margin-bottom: -377px
-  agm-map
-    height: 477px
-    width: 100%
-    margin-bottom: -100px
-    left: -50%
-    .agm-info-window-content
-      padding-left: 20px
+    margin-bottom: -424px
+    agm-map
+      height: 477px
+      width: 100%
+      margin-bottom: -100px
+      left: -50%
+      .agm-info-window-content
+        padding-left: 20px
+        color: #000
+        .contact-mean
+          display: inline-block
+          height: 36px
+          width: 36px
+          text-align: center
+          border-radius: 100%
+          border-width: 2px
+          border-style: solid
+          &:not(:last-of-type)
+            margin-right: 10px
+          i
+            height: 26px
+            margin-top: 4px
+  form
+    .form-control
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px
+      border: 1px solid rgba(0, 0, 0, 0.15)
       color: #000
-      .contact-mean
-        display: inline-block
-        height: 36px
-        width: 36px
-        text-align: center
-        border-radius: 100%
-        border: 2px solid black
-        &:not(:last-of-type)
-          margin-right: 10px
-        i
-          height: 26px
-          margin-top: 4px
-  .form-control
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px
-    border: 1px solid rgba(0, 0, 0, 0.15)
-    color: #000
+    .help-text
+      position: absolute

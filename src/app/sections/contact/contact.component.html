@@ -37,47 +37,29 @@
   <div class="container">
     <div class="row justify-content-end">
       <div class="col-5 p-5">
-        <form>
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Name">
+        <form [formGroup]="contactForm" method="POST" action="https://formspree.io/contact@alizedebray.com" onsubmit="this.submit()">
+          <div class="form-group mb-4">
+            <input type="text" class="form-control" name="name" formControlName="name" placeholder="Name">
+            <small *ngIf="(formSubmitted || contactForm.get('name').dirty) && contactForm.get('name').invalid" class="help-text pl-1 text-danger">Name is required.</small>
+          </div>
+          <div class="form-group mb-4">
+            <input type="email" class="form-control" name="email" formControlName="email" placeholder="Email address">
+            <span *ngIf="(formSubmitted || contactForm.get('email').dirty) && contactForm.get('email').invalid" class="help-text pl-1 text-danger">
+              <small *ngIf="contactForm.get('email').errors.required">Email is required.</small>
+              <small *ngIf="contactForm.get('email').touched && !contactForm.get('email').errors.required && contactForm.get('email').errors.email">Email is not valid.</small>
+            </span>
           </div>
           <div class="form-group">
-            <input type="email" class="form-control" placeholder="Email address">
+            <input type="email" class="form-control" name="company" formControlName="company" placeholder="Company &nbsp;(optional)">
           </div>
-          <div class="form-group">
-            <input type="email" class="form-control" placeholder="Company (optional)">
-            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+          <div class="form-group mb-0">
+            <textarea #message class="form-control" rows="4" name="message" formControlName="message" maxlength="2000" placeholder="Message"></textarea>
+            <small *ngIf="(formSubmitted || contactForm.get('message').dirty) && contactForm.get('message').invalid" class="help-text pl-1 text-danger">Message is required.</small>
+            <p class="form-text text-right text-muted pr-1 my-0"><small>{{message.value.length}} / 2000</small></p>
           </div>
-          <div class="form-group">
-            <textarea class="form-control" placeholder="Message"></textarea>
-          </div>
-          <button type="submit" class="btn btn-secondary btn-lg mt-3">Send &nbsp; <i class="material-icons">&#xE163;</i></button>
+          <button type="submit" class="btn btn-secondary btn-lg" (click)="verifyForm($event)">Send &nbsp; <i class="material-icons">&#xE163;</i></button>
         </form>
       </div>
     </div>
   </div>
 </section>
-
-<!-- 
-<footer id="contact">
-  <agm-map [latitude]="marker_lat" [longitude]="marker_lng" [styles]="style" [zoom]="4">
-    <agm-marker [latitude]="marker_lat" [longitude]="marker_lng">
-      <agm-info-window [isOpen]="true">
-          <div class='agm-info-window-content'>
-            Lille, FRANCE
-          </div>
-      </agm-info-window>
-    </agm-marker>
-  </agm-map>
-  <div class="container">
-    <div class="row justify-content-around">
-      <div class="col-3 mt-3">
-        
-      </div>
-      <div class="col-3 mt-3">
-        <h2>Contact me</h2>    
-      </div>
-      <div class="col-3 mt-3"></div>
-    </div>
-  </div>
-</footer> -->

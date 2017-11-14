@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'contact-section',
@@ -7,6 +8,25 @@ import { Component } from '@angular/core';
 })
 
 export class ContactComponent {
+
+  formSubmitted: boolean = false;
+  
+  contactForm = new FormGroup ({
+    name: new FormControl("", Validators.required),
+    email: new FormControl("", [
+      Validators.required,
+      Validators.email
+    ]),
+    company: new FormControl(""),
+    message: new FormControl("", Validators.required)
+  }); 
+
+  verifyForm (event: any, form: any){
+    this.formSubmitted = true;
+    if(this.contactForm.invalid){
+      event.preventDefault();
+    }
+  }
 
   marker = {
     latitude: 50.629250,
