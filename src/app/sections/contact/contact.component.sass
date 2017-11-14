@@ -14,9 +14,25 @@
       left: 50%
       z-index: 10
   agm-map
-    height: 352px
+    height: 377px
     width: 100%
+    position: absolute
+    left: 0
     .agm-info-window-content
       color: #000
-  label
-    font-size: 0.8rem
+      .contact-mean
+        display: inline-block
+        height: 36px
+        width: 36px
+        text-align: center
+        border-radius: 100%
+        border: 2px solid black
+        &:not(:last-of-type)
+          margin-right: 10px
+        i
+          height: 26px
+          margin-top: 4px
+  .form-control
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px
+    border: 1px solid rgba(0, 0, 0, 0.15)
+    color: #000

@@ -9,8 +9,8 @@ import { Component } from '@angular/core';
 export class ContactComponent {
   marker_lat: number = 50.629250;
   marker_lng: number = 3.057256;
-  map_lat: number = 46.227638;
-  map_lng: number = 2.213749;
+  map_lat: number = 52.629250;
+  map_lng: number = 30.057256;
   style = [
     {
       "stylers": [

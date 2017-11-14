@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@import '../node_modules/bootstrap/scss/functions';
 @import 'variables';
 @import '../node_modules/bootstrap/scss/bootstrap';
+@import '../node_modules/font-awesome/scss/font-awesome';
 
 body
   min-width: 300px
@@ -9,6 +12,7 @@ body
   background-repeat: no-repeat
   background-position: top left
   background-image: url('./assets/img/home-background-sm.png')
+  letter-spacing: 0.08rem
   @media (min-width: 576px)  
     background-image: url('./assets/img/home-background-md.png')
   @media (min-width: 992px)  
@@ -27,3 +31,8 @@ body
     margin-top: -8px
     position: relative
     top: 6px
+    
+.fa
+  position: relative
+  bottom: 2%
+  left: 2%
