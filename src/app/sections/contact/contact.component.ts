@@ -41,7 +41,7 @@ export class ContactComponent {
     streetViewControl: false,
     scrollwheel: false,
     zoomControlOptions: {
-      position: 3
+      position: 8
     },
     styles: [
       {

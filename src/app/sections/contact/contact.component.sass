@@ -14,16 +14,16 @@
       left: 50%
       z-index: 10
   #mapContainer
-    margin-left: -40%
-    width: 140%
     height: 424px
-    overflow: hidden
     margin-bottom: -424px
+    overflow: hidden
+    position: relative
     agm-map
+      position: absolute
       height: 477px
-      width: 100%
-      margin-bottom: -100px
-      left: -50%
+      width: 150vw
+      right: 0vw
+      top: 0
       .agm-info-window-content
         padding-left: 20px
         color: #000
@@ -47,3 +47,13 @@
       color: #000
     .help-text
       position: absolute
+
+  @media (max-width: 767px)
+    #mapContainer
+      height: 300px
+      margin-bottom: 0
+      agm-map
+        height: 450px
+        width: 100%
+        top: 0
+        right: 0
