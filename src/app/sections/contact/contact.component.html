@@ -10,19 +10,31 @@
     </div>
     <img src="./../../../assets/img/contact-arrow.png">
   </div>
-  <div class="container-fluid">
-    <agm-map [latitude]="map_lat" [longitude]="map_lng" [styles]="style" [zoom]="4" [maxZoom]="4" [minZoom]="4" [disableDefaultUI]="true" [streetViewControl]="false" [zoomControl]="false" [mapDraggable]="false">
-      <agm-info-window [latitude]="marker_lat" [longitude]="marker_lng" [isOpen]="true">
+  <div id="mapContainer">
+    <agm-map 
+      [latitude]="map.latitude" 
+      [longitude]="map.longitude" 
+      [styles]="map.styles" 
+      [zoom]="map.zoom"
+      [streetViewControl]="map.streetViewControl"
+      [scrollwheel]="map.scrollwheel"
+      [zoomControlOptions]="map.zoomControlOptions">
+      <agm-info-window 
+        [latitude]="marker.latitude" 
+        [longitude]="marker.longitude" 
+        [isOpen]="marker.isOpen">
         <div class='agm-info-window-content text-center'>
           <h5 class="mb-1">Alizé Debray</h5>
           <p>Lille, FRANCE</p>
-          <a class="contact-mean"><i class="material-icons">&#xE0CD;</i></a>
-          <a class="contact-mean"><i class="material-icons">&#xE0BE;</i></a>
-          <a class="contact-mean"><i class="fa fa-2x fa-linkedin" aria-hidden="true"></i></a>
-          <a class="contact-mean"><i class="fa fa-2x fa-github" aria-hidden="true"></i></a>
+          <a class="contact-mean" href="tel:+33676670504"><i class="material-icons">&#xE0CD;</i></a>
+          <a class="contact-mean" href="skype:alizedebray?userinfo"><i class="material-icons">&#xE0BE;</i></a>
+          <a class="contact-mean" href="https://www.linkedin.com/in/alizedebray" target="_blank"><i class="fa fa-2x fa-linkedin" aria-hidden="true"></i></a>
+          <a class="contact-mean" href="https://github.com/alizedebray" target="_blank"><i class="fa fa-2x fa-github" aria-hidden="true"></i></a>
         </div>
       </agm-info-window>
     </agm-map>
+  </div>
+  <div class="container">
     <div class="row justify-content-end">
       <div class="col-5 p-5">
         <form>
