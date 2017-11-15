@@ -79,7 +79,7 @@ export class ScrollDirective {
     const start: number = element.scrollTop;
     let step = () => {
       let elapsed = Date.now() - clock;
-      let position = this.position(start, end - navbar.offsetHeight, elapsed, duration);
+      let position = this.position(start, end - (navbar.offsetHeight + 80), elapsed, duration);
       element.scrollTop = position;
       if (elapsed > duration) {
       } else {
