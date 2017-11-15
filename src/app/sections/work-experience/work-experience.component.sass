@@ -5,12 +5,14 @@
     .carousel-inner
       padding-bottom: 45px
       @media (max-width: 575px)
-        height: 400px
+        height: 500px
       .carousel-item
         margin: auto
         width: 98%
         height: 249px
-        @media (max-width: 991px)
+        @media (max-width: 575px)
+          height: 450px
+        @media (min-width: 575px) and (max-width: 991px)
           height: 312px
     .carousel-control-prev
       width: 50px
