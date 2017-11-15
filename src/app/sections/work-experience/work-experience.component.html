@@ -3,7 +3,7 @@
     <h2 class="text-center mb-3">Work Experience</h2>
     <div class="row justify-content-md-center">
       <div class="col-md-10 col-lg-9">
-        <div id="carouselExampleIndicators" (swipeleft)="swipeNext()" (swiperight)="swipePrev()" class="carousel slide" data-ride="carousel">
+        <div id="carouselExampleIndicators" (swipeleft)="swipeNext()" (swiperight)="swipePrev()" class="carousel slide" data-ride="carousel" data-interval="false">
           <ol class="carousel-indicators">
             <li  *ngFor="let experience of workExperiences; let first = first; let i = index" data-target="#carouselExampleIndicators" [ngClass]="{ active: first }" [attr.data-slide-to]="index"></li>
           </ol>
