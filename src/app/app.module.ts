@@ -10,7 +10,8 @@ import { ProfileComponent } from './sections/profile/profile.component';
 import { WorkExperienceComponent } from './sections/work-experience/work-experience.component';
 import { EducationComponent } from './sections/education/education.component';
 import { ContactComponent } from './sections/contact/contact.component';
-import { ScrollDirective } from './scroll.directive';
+import { ExperienceCardComponent } from './elements/experience-card/experience-card.component';
+import { ScrollDirective } from './directives/scroll.directive';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ScrollDirective } from './scroll.directive';
     WorkExperienceComponent,
     EducationComponent,
     ContactComponent,
+    ExperienceCardComponent,
     ScrollDirective
   ],
   imports: [

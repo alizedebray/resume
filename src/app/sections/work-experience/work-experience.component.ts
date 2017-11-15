@@ -1,4 +1,5 @@
 import { Component, ViewChild, Renderer, ElementRef } from '@angular/core';
+import { Experience } from '../../models/experience';
 
 @Component({
   selector: 'work-experience-section',
@@ -26,71 +27,92 @@ export class WorkExperienceComponent {
       [new MouseEvent('click', { bubbles: true, cancelable: true })]);
   }
 
-  workExperiences = [
-    {
-      "job_title": "Front-end developer",
-      "company_name": "The New Luncher",
-      "company_description": "The New Luncher is a service which allow parents to provide lunch boxes to their children.",
+  workExperiences: Experience[] = [
+    { 
+      "title": "Front-end developer",
+      "provider": "The New Luncher",
+      "description": "The New Luncher is a service which allow parents to provide lunch boxes to their children.",
       "achievements": [
         "Participated in the startup’s launch",
         "Developed and designed an AngularJS web application",
         "Conceived an user experience in accordance with the brand’s image"
-      ]
+      ],
+      "place": "SINGAPORE",
+      "dates": "2016 - 2017",
+      "length": "5 months"
     },
     {
-      "job_title": "Front-end development intern",
-      "company_name": "SeeChic",
-      "company_description": "Seechic is an online contact lenses’ and sunglasses’ retailer.",
+      "title": "Front-end development intern",
+      "provider": "SeeChic",
+      "description": "Seechic is an online contact lenses’ and sunglasses’ retailer.",
       "achievements": [
         "Participated in the redesign of the whole website",
         "Design and developed the front-end part of a new interface",
         "Managed the content’s production",
         "Set up an automatic emailing engine"
-      ]
+      ],
+      "place": "SINGAPORE",
+      "dates": "2016",
+      "length": "7 months"
     },
     {
-      "job_title": "Salesperson",
-      "company_name": "IKEA",
-      "company_description": "IKEA is the world’s largest furniture retailer.",
+      "title": "Salesperson",
+      "provider": "IKEA",
+      "description": "IKEA is the world’s largest furniture retailer.",
       "achievements": [
         "Advised clients",
         "Organised and replenished the home textiles department "
-      ]
+      ],
+      "place": "Lille, FRANCE",
+      "dates": "2015 - 2016",
+      "length": "3 months"
     },
     {
-      "job_title": "Front-end development intern",
-      "company_name": "Orange",
-      "company_description": "Orange is the French telecommunications’ leader.",
+      "title": "Front-end development intern",
+      "provider": "Orange",
+      "description": "Orange is the French telecommunications’ leader.",
       "achievements": [
         "Participated in the improvement of the administration of professional clients",
         "Developed the front-end part of an interface"
-      ]
+      ],
+      "place": "Lille, FRANCE",
+      "dates": "2015",
+      "length": "3 months"
     },
     {
-      "job_title": "Web development volunteer",
-      "company_name": "Com&Web",
-      "company_description": "Com&Web is a charity that sells websites and communication supports  to collect money for the disadvantages.",
+      "title": "Web development volunteer",
+      "provider": "Com&Web",
+      "description": "Com&Web is a charity that sells websites and communication supports  to collect money for the disadvantages.",
       "achievements": [
         "Designed and developed 6-pages showcase websites"
-      ]
+      ],
+      "place": "Lille, FRANCE",
+      "dates": "2015",
+      "length": "5 months"
     },
     {
-      "job_title": "Sales intern",
-      "company_name": "Darty",
-      "company_description": "Darty is the French leading household appliance store chain.",
+      "title": "Sales intern",
+      "provider": "Darty",
+      "description": "Darty is the French leading household appliance store chain.",
       "achievements": [
         "Pursued a sales methods training",
         "Advised clients",
         "Organised and replenished the small appliance department"
-      ]
+      ],
+      "place": "Coignières, FRANCE",
+      "dates": "2014",
+      "length": "2 months"
     },
     {
-      "job_title": "Mystery customer",
-      "company_name": "Orphée",
-      "company_description": "Orphée is a company specialised in the assessment of user experience.",
+      "title": "Mystery customer",
+      "provider": "Orphée",
+      "description": "Orphée is a company specialised in the assessment of user experience.",
       "achievements": [
         "Evaluated customer service within a long-term study concerning one of French leading car dealers"
-      ]
+      ],
+      "place": "Suresnes, FRANCE",
+      "dates": "2013",
+      "length": "5 months"
     }
-  ]
+  ];
 }

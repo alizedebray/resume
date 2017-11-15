@@ -1,0 +1,24 @@
+<div class="card h-100">
+  <div class="card-body">
+    <div class="dates-col mb-4 pr-sm-4">
+        <p class="mb-0 text-right d-none d-sm-block"><i class="material-icons md-14">&#xE55F;</i>&nbsp;<small>{{ experience.place }}</small></p>
+      <div class="row align-items-end">
+        <div class="col col-sm-12 col-sm-auto">
+            <p class="mb-0 text-sm-right"><small>{{ experience.dates }}</small></p>
+            <p class="mb-1 text-sm-right" *ngIf="experience.length!=undefined"><small><i>{{ experience.length }}</i></small></p>
+        </div>
+        <div class="col col-sm-12 col-sm-auto d-sm-none">
+            <p class="mb-1 text-right"><i class="material-icons md-14">&#xE55F;</i>&nbsp;<small>{{ experience.place }}</small></p>
+        </div>
+      </div>
+    </div>
+    <div class="content-col pl-sm-4">
+      <h6 class="card-subtitle text-muted mb-1">{{ experience.provider }}</h6>
+      <h5 class="card-title mb-3">{{ experience.title }}</h5>
+      <p class="card-text">{{ experience.description }}</p>
+      <ul *ngIf="experience.achievements!=undefined && experience.achievements.length>0">
+        <li *ngFor="let achievement of experience.achievements">{{ achievement }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

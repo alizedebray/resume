@@ -2,23 +2,8 @@
   <div class="container">
     <h2 class="mb-3">Education</h2>
     <div class="row justify-content-md-center">
-      <div class="col-lg-6">
-        <div class="card mb-4">
-          <div class="card-body">
-            <h6 class="card-subtitle mb-1 text-muted">Iteem - Centrale Lille</h6>
-            <h5 class="card-title mb-3">Engineering master’s degree</h5>
-            <p class="card-text">Preparing a master’s degree in industrial and entrepreneurial engineering.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="card mb-4">
-          <div class="card-body">
-            <h6 class="card-subtitle mb-1 text-muted">Skema Business School</h6>
-            <h4 class="card-title mb-3">Management master’s degree</h4>
-            <p class="card-text">Preparing a master’s degree in project and programme management & business development.</p>
-          </div>
-        </div>
+      <div class="col-lg-6 mb-4 mb-lg-0" *ngFor="let experience of educationExperiences">
+        <experience-card [experience]="experience"></experience-card>
       </div>
     </div>
   </div>
