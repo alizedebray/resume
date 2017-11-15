@@ -21,7 +21,7 @@ export class ContactComponent {
     message: new FormControl("", Validators.required)
   }); 
 
-  verifyForm (event: any, form: any){
+  verifyForm (event: any){
     this.formSubmitted = true;
     if(this.contactForm.invalid){
       event.preventDefault();

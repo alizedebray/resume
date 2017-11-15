@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, Renderer, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'work-experience-section',
@@ -6,6 +6,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./work-experience.component.sass']
 })
 export class WorkExperienceComponent {
+
+  constructor(private renderer:Renderer) {}
+
+  @ViewChild('prevButton') prevButton:ElementRef;
+  @ViewChild('nextButton') nextButton:ElementRef;
+
+  SWIPE_ACTION = { LEFT: 'swipeleft', RIGHT: 'swiperight' };
+
+  swipeNext(){
+    this.renderer.invokeElementMethod(this.nextButton.nativeElement, 
+      'dispatchEvent', 
+      [new MouseEvent('click', { bubbles: true, cancelable: true })]);
+  }
+
+  swipePrev(){
+    this.renderer.invokeElementMethod(this.prevButton.nativeElement, 
+      'dispatchEvent', 
+      [new MouseEvent('click', { bubbles: true, cancelable: true })]);
+  }
+
   workExperiences = [
     {
       "job_title": "Front-end developer",

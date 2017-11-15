@@ -3,7 +3,7 @@
     <h2 class="text-center mb-3">Work Experience</h2>
     <div class="row justify-content-md-center">
       <div class="col-md-10 col-lg-9">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div id="carouselExampleIndicators" (swipeleft)="swipeNext()" (swiperight)="swipePrev()" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li  *ngFor="let experience of workExperiences; let first = first; let i = index" data-target="#carouselExampleIndicators" [ngClass]="{ active: first }" [attr.data-slide-to]="index"></li>
           </ol>
@@ -21,11 +21,11 @@
               </div>
             </div>
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <a #prevButton class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <a #nextButton class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
