@@ -31,11 +31,11 @@ export class WorkExperienceComponent {
     { 
       "title": "Front-end developer",
       "provider": "The New Luncher",
-      "description": "The New Luncher is a service which allow parents to provide lunch boxes to their children.",
+      "description": "The New Luncher is a service which allows parents to provide lunch boxes to their children at school.",
       "achievements": [
-        "Participated in the startup’s launch",
-        "Developed and designed an AngularJS web application",
-        "Conceived an user experience in accordance with the brand’s image"
+        "Participated in the launch of the startup",
+        "Designed and developed an AngularJS web application",
+        "Conceived a user experience in accordance with the brand’s image"
       ],
       "place": "SINGAPORE",
       "dates": "2016 - 2017",
@@ -44,7 +44,7 @@ export class WorkExperienceComponent {
     {
       "title": "Front-end development intern",
       "provider": "SeeChic",
-      "description": "Seechic is an online contact lenses’ and sunglasses’ retailer.",
+      "description": "Seechic is an online contact lenses and sunglasses retailer.",
       "achievements": [
         "Participated in the redesign of the whole website",
         "Design and developed the front-end part of a new interface",

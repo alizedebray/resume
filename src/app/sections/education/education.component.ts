@@ -16,7 +16,7 @@ export class EducationComponent {
   },{ 
     "title": "Management master’s degree",
     "provider": "Skema Business School",
-    "description": "Preparing a master’s degree in project and programme management & business development.",
+    "description": "Preparing a master’s degree in project and program management & business development.",
     "place": "Lille, FRANCE",
     "dates": "2017 - 2018"
   }];
