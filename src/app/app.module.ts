@@ -3,6 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AgmCoreModule } from '@agm/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+export class CustomHammerConfig extends HammerGestureConfig  {
+  overrides = <any>{
+      'pinch': { enable: false },
+      'rotate': { enable: false }
+  }
+}
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './sections/home/home.component';
@@ -34,7 +41,12 @@ import { ScrollDirective } from './directives/scroll.directive';
     }),
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HAMMER_GESTURE_CONFIG,
+      useClass: CustomHammerConfig
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
