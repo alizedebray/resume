@@ -29,13 +29,24 @@ export class WorkExperienceComponent {
 
   workExperiences: Experience[] = [
     { 
+      "title": "Business analyst",
+      "provider": "Amadeus",
+      "description": "Amadeus is the world's leading provider of distribution solutions for the travel and tourism industry.",
+      "achievements": [
+        "Designed features to enhance an existing web application based on customer needs"
+      ],
+      "place": "Nice, FRANCE",
+      "dates": "2018",
+      "length": "Current"
+    },
+    { 
       "title": "Front-end developer",
       "provider": "The New Luncher",
-      "description": "The New Luncher is a service which allows parents to provide lunch boxes to their children at school.",
+      "description": "The New Luncher is a start-up that allows parents to order lunch boxes for their children at school.",
       "achievements": [
-        "Participated in the launch of the startup",
-        "Designed and developed an AngularJS web application",
-        "Conceived a user experience in accordance with the brand’s image"
+        "Participated in the launch of the start-up",
+        "Conceived an online user experience in line with the brand image",
+        "Designed and developed an AngularJS web application"
       ],
       "place": "SINGAPORE",
       "dates": "2016 - 2017",
@@ -44,12 +55,12 @@ export class WorkExperienceComponent {
     {
       "title": "Front-end development intern",
       "provider": "SeeChic",
-      "description": "Seechic is an online contact lenses and sunglasses retailer.",
+      "description": "SeeChic is a start-up that sells contact lenses and sunglasses online.",
       "achievements": [
-        "Participated in the redesign of the whole website",
-        "Design and developed the front-end part of a new interface",
-        "Managed the content’s production",
-        "Set up an automatic emailing engine"
+        "Participated in the redesign of a website in its entirety",
+        "Enhanced an online user experience to increase conversion rate",
+        "Designed and developed the front-end of a web interface",
+        "Managed the production of content"
       ],
       "place": "SINGAPORE",
       "dates": "2016",
@@ -58,33 +69,33 @@ export class WorkExperienceComponent {
     {
       "title": "Salesperson",
       "provider": "IKEA",
-      "description": "IKEA is the world’s largest furniture retailer.",
+      "description": "IKEA is the largest furniture retailer in the world.",
       "achievements": [
-        "Advised clients",
-        "Organised and replenished the home textiles department "
-      ],
-      "place": "Lille, FRANCE",
-      "dates": "2015 - 2016",
-      "length": "3 months"
-    },
-    {
-      "title": "Front-end development intern",
-      "provider": "Orange",
-      "description": "Orange is the French telecommunications’ leader.",
-      "achievements": [
-        "Participated in the improvement of the administration of professional clients",
-        "Developed the front-end part of an interface"
+        "Advised clients on home textiles",
+        "Took care of customer journey in my area"
       ],
       "place": "Lille, FRANCE",
       "dates": "2015",
       "length": "3 months"
     },
     {
-      "title": "Web development volunteer",
-      "provider": "Com&Web",
-      "description": "Com&Web is a charity that sells websites and communication supports  to collect money for the disadvantages.",
+      "title": "Front-end development intern",
+      "provider": "Orange",
+      "description": "Orange is the French leader in telecommunications.",
       "achievements": [
-        "Designed and developed 6-pages showcase websites"
+        "Helped improve the administration of business clients by internal users",
+        "Developed the front-end of a web application"
+      ],
+      "place": "Lille, FRANCE",
+      "dates": "2015",
+      "length": "3 months"
+    },
+    {
+      "title": "Software development volunteer ",
+      "provider": "Com&Web",
+      "description": "Com&Web is a charity that sells websites and communication materials to raise funds for disadvantaged people.",
+      "achievements": [
+        "Designed and developed showcase websites to attract potential clients for small businesses"
       ],
       "place": "Lille, FRANCE",
       "dates": "2015",
@@ -93,24 +104,24 @@ export class WorkExperienceComponent {
     {
       "title": "Sales intern",
       "provider": "Darty",
-      "description": "Darty is the French leading household appliance store chain.",
+      "description": "Darty is the leading French chain of home appliance stores.",
       "achievements": [
-        "Pursued a sales methods training",
-        "Advised clients",
-        "Organised and replenished the small appliance department"
+        "Pursued a training in sales methods",
+        "Pursued a training in sales methods",
+        "Took care of the customer journey in my area"
       ],
-      "place": "Coignières, FRANCE",
+      "place": "Paris, FRANCE",
       "dates": "2014",
       "length": "2 months"
     },
     {
       "title": "Mystery customer",
       "provider": "Orphée",
-      "description": "Orphée is a company specialised in the assessment of user experience.",
+      "description": "Orphée is a company specializing in the evaluation of the user experience.",
       "achievements": [
-        "Evaluated customer service within a long-term study concerning one of French leading car dealers"
+        "Evaluated the customer service of one of the leading French car dealers"
       ],
-      "place": "Suresnes, FRANCE",
+      "place": "Paris, FRANCE",
       "dates": "2013",
       "length": "5 months"
     }
